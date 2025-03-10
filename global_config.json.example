@@ -1,0 +1,10 @@
+{
+    "file_paths": {
+        "output_directory": "output"
+    },
+    "api_config": {
+        "base_url": "https://api.openai.com/v1",
+        "api_key": "your_api_key_here",
+        "model": "gpt-4o"
+    }
+}

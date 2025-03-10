@@ -1,44 +1,44 @@
 # AIWNT Core
 
-[中文](./README.zh.md)
+[English](./README.md)
 
 ![logo](./img/logo.webp)  
 
-AIWNT (AI Web Novel Translator) is a tool specifically designed for translating ultra-long web novels consisting of tens of millions of characters. By utilizing the latest large language model technology, it aims to remove barriers to cross-language dissemination of web novels, enabling readers worldwide to enjoy their favorite works without boundaries.  
+AIWNT（AI Web Novel Translator）是专为处理千万字级别超长网络小说的翻译而设计的工具。利用最新的大语言模型技术，消除网络小说跨语言传播的障碍，使全球读者无界限享受自己喜爱的作品。  
 
-This project is a locally deployable open-source version built on a simple AI agent. It is a streamlined implementation of our [online workflow (aiwnt.com)](https://www.aiwnt.com/), yet it retains core functionalities. This allows users to deploy and use AIWNT in their own environments for efficient and flexible translation operations.  
+本项目是基于简单AI智能体构建的本地开源版本，它是对我们的[在线工作流（aiwnt.com）](https://www.aiwnt.com/)的一个简化版实现，但仍然保留了核心功能。您可以在自己的环境中部署和使用AIWNT，以实现高效、灵活的翻译操作。  
 
-## Features
+## 功能特性
 
-- **High-Quality Translation Results**: Based on large language models, the quality of translations significantly surpasses traditional machine translation.
-- **Efficient Processing Capabilities**: Optimized for handling ultra-long texts, it can swiftly translate content of tens of millions of characters.
-- **User-Friendly**: With no complex deployment process, you can start translating with just one line of code.
-- **Local Deployment**: Allows for personalized customization according to user needs, meeting specific requirements.
+- **高质量翻译结果**：基于大语言模型，其翻译质量大幅度优于传统机器翻译。
+- **高效率处理能力**：针对超长文本优化，能够快速翻译千万字级别的内容。
+- **简单易用**：没有复杂的部署流程，一行代码即可开始翻译。
+- **本地化部署**：允许用户根据需要进行个性化定制，满足特定需求。
 
-## Getting Started
+## 如何开始使用
 
-If you prefer not to deploy it yourself, you can also try our more powerful [online workflow](https://www.aiwnt.com/). The online workflow offers higher translation quality and more stable service.  
+如果您不希望自己部署，也可以试试我们功能更强大的[在线工作流](https://www.aiwnt.com/)。
 
-Follow these steps to quickly embark on your AIWNT journey:  
+按照以下步骤快速开启您的AIWNT之旅：
 
-### Prerequisites
+### 前提条件
 
 - [Python](https://www.python.org/downloads/)
 - [Git](https://git-scm.com/downloads)
-- [OpenAI API Key](https://platform.openai.com/account/api-keys)
+- [DeepSeek API Key](https://www.deepseek.com/)
 
-### Step-by-Step Guide
+### 步骤指南
 
-1. **Clone the Repository**
+1. **克隆到本地**
     ```
     git clone https://github.com/Karasukaigan/aiwnt-core.git
     ```
-2. **Install the OpenAI Library**
+2. **安装OpenAI库**
     ```
     pip install openai
     ```
-3. **Configure global_config.json**  
-    Remove the `.example` suffix from `global_config.json.example`, then edit `global_config.json` to include your actual API Key under `api_key`: 
+3. **配置global_config.json**  
+    去掉`global_config.json.example`的`.example`后缀，然后编辑`global_config.json`，在`api_key`里填写您真实的API Key：  
 
     ```
     {
@@ -46,13 +46,13 @@ Follow these steps to quickly embark on your AIWNT journey:
             "output_directory": "output"
         },
         "api_config": {
-            "base_url": "https://api.openai.com/v1",
+            "base_url": "https://api.deepseek.com/v1",
             "api_key": "your_api_key_here",
-            "model": "gpt-4o"
+            "model": "deepseek-chat"
         }
     }
     ```
-4. **Prepare a TXT File Like This**
+4. **准备一个像这样的TXT文件**
     ```
     《代码修仙》
     简介：外卖骑手李凡意外穿越修真界，成为青云宗最底层的杂役弟子。在藏书阁打扫时，他发现修真界的阵法竟与计算机编程惊人相似。凭借编程功底，他参透阵法玄机，将代码思维与修真体系完美融合。当青云宗遭魔门围攻，他以程序员思维重构护宗大阵，意外激活上古禁制，揭露修真界覆灭危机。随着修为精进，李凡发现自己的穿越并非偶然，一场惊天阴谋浮出水面。他将代码与阵法结合，游历天下收集上古阵纹，解构天地法则，最终踏上拯救修真界的道路。
@@ -69,12 +69,12 @@ Follow these steps to quickly embark on your AIWNT journey:
     李凡下意识后退，手中的扫帚微微颤抖："我...我只是随便试试。"
     ...
     ```
-5. **Execute Translation Tasks**
+5. **执行翻译任务**
     ```
     python run.py "path_to_txt_file" "target_language"
     ```
-   Here's an example:
+    您可以参考这个例子：
     ```
     python run.py "代码修仙.txt" "english"
     ```
-    The translated text will be output to the `output_directory` specified in the `global_config.json` configuration.
+    翻译好的文本会被输出到`global_config.json`里配置的`output_directory`目录里。

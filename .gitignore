@@ -1,0 +1,4 @@
+global_config.json
+usage.log
+__pycache__/
+/output/
