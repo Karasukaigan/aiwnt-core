@@ -25,7 +25,7 @@ AIWNT（AI Web Novel Translator）は、数千万文字に及ぶ超長編ウェ�
 
 - [Python](https://www.python.org/downloads/)
 - [Git](https://git-scm.com/downloads)
-- [OpenAI APIキー](https://www.deepseek.com/)
+- [OpenAI APIキー](https://platform.openai.com/account/api-keys)
 
 ### ステップバイステップガイド
 
@@ -46,9 +46,9 @@ AIWNT（AI Web Novel Translator）は、数千万文字に及ぶ超長編ウェ�
             "output_directory": "output"
         },
         "api_config": {
-            "base_url": "https://api.deepseek.com/v1",
+            "base_url": "https://api.openai.com/v1",
             "api_key": "your_api_key_here",
-            "model": "deepseek-chat"
+            "model": "gpt-4o"
         }
     }
     ```
