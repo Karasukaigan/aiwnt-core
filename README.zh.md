@@ -1,12 +1,12 @@
 # AIWNT Core
 
-[English](./README.md)
+[English](./README.md) | [日语](./README.ja.md)
 
 ![logo](./img/logo.webp)  
 
 AIWNT（AI Web Novel Translator）是专为处理千万字级别超长网络小说的翻译而设计的工具。利用最新的大语言模型技术，消除网络小说跨语言传播的障碍，使全球读者无界限享受自己喜爱的作品。  
 
-本项目是基于简单AI智能体构建的本地开源版本，它是对我们的[在线工作流（aiwnt.com.cn）](https://www.aiwnt.com.cn/)的一个简化版实现，但仍然保留了核心功能。您可以在自己的环境中部署和使用AIWNT，以实现高效、灵活的翻译操作。  
+本项目是基于简单AI智能体构建的本地开源版本，它是对我们的[在线工作流（aiwnt.com.cn）](https://www.aiwnt.com.cn/)的一个简化版实现，但仍然保留了核心功能。您可以在自己的环境中部署和使用AIWNT，以实现高效、灵活的翻译操作。
 
 ## 功能特性
 
