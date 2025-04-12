@@ -1,6 +1,6 @@
 # AIWNT Core
 
-[中文](./README.zh.md) | [日语](./README.ja.md)
+[中文](./README.zh.md) | [日本語](./README.ja.md)
 
 ![logo](./img/logo.webp)  
 
